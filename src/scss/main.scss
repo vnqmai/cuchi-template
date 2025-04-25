@@ -1,0 +1,19 @@
+// main.scss
+@use "../../node_modules/bootstrap/scss/bootstrap" as bootstrap;
+
+// Base
+@use "base/reset";
+@use "base/variables";
+@use "base/mixins";
+@use "base/typography";
+@use "base/base";
+
+// Components
+@use "components/button";
+
+// Layout
+@use "layout/header";
+@use "layout/footer";
+
+// Pages
+@use "pages/home";
