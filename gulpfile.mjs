@@ -126,6 +126,7 @@ export const serve = () => {
     server: {
       baseDir: paths.dist,
       index: 'home.html',
+      open: false
     },
     port: 3000,
   });
