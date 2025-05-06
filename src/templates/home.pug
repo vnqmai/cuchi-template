@@ -1,14 +1,21 @@
 extends layout/layout.pug
 
 block content
+  include partials/hashtags
+  include partials/intro1
   div(class="container")
     div(class="row")
       div(class="col")
-        h1 The Downtown Cucci
-        p Welcome to the Downtown Cucci, your go-to destination for all things cucci!
-        p We offer a wide range of cucci products and services to meet your needs.
-        p Our team is dedicated to providing you with the best experience possible.
-        p Thank you for choosing the Downtown Cucci!
+        h1 The Downtown Cucci 
+        h2 Welcome to our store
+        h3 Discover our collection
+        h4 Our Products
+        h5 Our Services
+        h6 Our Location
+        p We offer a wide range of cucci products, from clothing to accessories.
+        p(class="body-1") Our mission is to provide the best cucci products at affordable prices.
+        p(class="body-2") Our team is dedicated to providing excellent customer service and ensuring you have a great shopping experience.
+        p(class="body-3") We are committed to sustainability and ethical sourcing of our products.
       div(class="col")
         img(src="./img/cuchi-logo.svg" alt="Cucci Logo" class="logo")
         p We are located in the heart of downtown, easily accessible by public transport.

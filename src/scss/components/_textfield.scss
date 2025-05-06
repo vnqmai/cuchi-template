@@ -1,0 +1,19 @@
+@use "base/_variables" as *;
+
+.textfield {
+  padding: 10px 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba($color: #FFFFFF, $alpha: 0.5);
+  font-weight: $font-weight-normal;
+  font-size: $font-size-sm-2;
+  color: $white-color;
+
+  &::placeholder {
+    color: $white-color;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}

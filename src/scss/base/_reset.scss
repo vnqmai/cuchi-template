@@ -1,1 +1,15 @@
+@use "base/variables" as *;
 // Reset CSS cơ bản (có thể dùng normalize hoặc custom)
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: $secondary-color;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}

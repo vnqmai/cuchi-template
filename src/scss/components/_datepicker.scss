@@ -1,0 +1,31 @@
+@use "base/variables" as *;
+
+.div-datepicker {
+  position: relative;
+  display: inline-block;
+  input {
+    padding-right: 30px;
+    max-width: 123px;
+    background-color: transparent;
+    border: none;
+    // font-family: Poppins;
+    font-weight: $font-weight-normal;
+    font-size: $font-size-xxs;
+    text-transform: uppercase;
+    color: $primary-color;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  .icon-updown {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &__open {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+}

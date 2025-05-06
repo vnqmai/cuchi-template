@@ -1,0 +1,14 @@
+@use "base/variables" as *;
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+}
+
+.divider {
+  border-bottom: 1px solid;
+
+  &--primary {
+    border-color: $primary-color;
+  }
+}

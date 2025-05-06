@@ -1,0 +1,24 @@
+// Override variables BEFORE importing bootstrap
+@use "sass:map";
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 1024px,
+  lg: 1440px,
+  xl: 1920px
+);
+
+// Example override of container max-widths (optional)
+$container-max-widths: (
+  sm: 480px,
+  md: 1024px,
+  lg: 1440px,
+  xl: 1920px
+);
+
+// Now import Bootstrap with your overrides applied
+@use "../../node_modules/bootstrap/scss/bootstrap" with (
+  $grid-breakpoints: $grid-breakpoints,
+  $container-max-widths: $container-max-widths
+);

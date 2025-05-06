@@ -1,0 +1,10 @@
+mixin select(name, options, selectedValue)
+  select.select(name=name)
+    if options && options.length
+      each option in options
+        option(
+          value=option.value,
+          selected=(option.value == selectedValue) ? true : false
+        ) #{option.label}
+    else
+      option(disabled selected) No options available

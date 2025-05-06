@@ -1,19 +1,33 @@
 // main.scss
-@use "../../node_modules/bootstrap/scss/bootstrap" as bootstrap;
+@use 'globals';
+
+// @use "../../node_modules/bootstrap/scss/bootstrap" as bootstrap;
+
+@use "bootstrap-custom";
+
+@use "../../node_modules/jquery-ui/themes/base/all.css";
+
 
 // Base
 @use "base/reset";
-@use "base/variables";
-@use "base/mixins";
 @use "base/typography";
+@use "base/mixins";
 @use "base/base";
 
 // Components
 @use "components/button";
+@use "components/datepicker";
+@use "components/select";
+@use "components/textfield";
 
 // Layout
 @use "layout/header";
 @use "layout/footer";
+
+// Partials
+@use "partials/hashtags";
+@use "partials/intro1";
+@use "partials/enrich";
 
 // Pages
 @use "pages/home";

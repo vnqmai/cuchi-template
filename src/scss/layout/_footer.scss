@@ -1,0 +1,139 @@
+@import "base/variables.scss";
+
+.footer {
+  position: relative;
+  &__footer {
+    background-color: $secondary-color;
+    padding: 20px;
+
+    &__left {
+      &__logo {
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        .logo {
+          width: 178px;
+          height: 130px;
+        }
+
+        @media screen and (max-width: $breakpoint-md) {
+          display: none;
+        }
+      }
+
+      &__titleandnav {
+        margin-bottom: 62px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .footer__footer__right__nav {
+          display: flex;
+
+          ul {
+            gap: 8px;
+          }
+        }
+
+        @media screen and (max-width: $breakpoint-md) {
+          margin-bottom: 43px;
+        }
+      }
+
+      &__title {
+        margin-bottom: 0;
+        color: $primary-color;
+
+        @media screen and (max-width: $breakpoint-md) {
+          font-size: $font-size-md-2;
+        }
+      }
+
+      &__info {
+        display: flex;
+        align-items: flex-start;
+        gap: 53px;
+
+        &__item {
+          max-width: 225px;
+
+          p {
+            color: $white-color;
+
+            @media screen and (max-width: $breakpoint-md) {
+              font-size: $font-size-sm;
+            }
+          }
+
+          &:nth-of-type(1) {
+            margin-bottom: 14px;
+            p:nth-of-type(1) {
+              font-weight: $font-weight-bold;
+
+              @media screen and (max-width: $breakpoint-md) {
+                font-size: $font-size-sm;
+                color: $primary-color;
+                
+              }
+            }
+          }
+        }
+
+        @media screen and (max-width: $breakpoint-md) {
+          display: block;
+        }
+      }
+
+      &__copyright {
+        color: $white-color;
+      }
+    }
+
+    &__right {
+      &__title {
+        color: $primary-color;
+        margin-bottom: 35px;
+
+        @media screen and (max-width: $breakpoint-md) {
+          display: none;
+        }
+      }
+      &__form {
+        .textfield {
+          margin-bottom: 10px;
+          width: 100%;
+        }
+        .btn {
+          margin-top: 38px;
+          width: 185px;
+        }
+
+        @media screen and (max-width: $breakpoint-md) {
+          display: none;
+        }
+      }
+      &__nav {
+        ul {
+          margin: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 44px;
+          list-style-type: none;
+        }
+
+        &__icon {
+          width: 31px;
+          height: 31px;
+        }
+
+        @media screen and (max-width: $breakpoint-md) {
+          display: none;
+        }
+      }
+    }
+  }
+}

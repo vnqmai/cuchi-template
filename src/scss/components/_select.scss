@@ -1,0 +1,14 @@
+@use "base/_variables" as *;
+
+.select {
+  background-color: transparent;
+  border: none;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-xxs;
+  color: $primary-color;
+  width: 60px;
+
+  &:focus-visible {
+    outline: none;
+  }
+}

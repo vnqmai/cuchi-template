@@ -1,0 +1,45 @@
+footer(class="footer")
+  .footer__footer
+    .container
+      .row
+        .footer__footer__left.col-xs-12.col-sm-12.col-md-8
+          .footer__footer__left__logo
+            a(href="/")
+              img(src="./img/cuchi-logo.svg" alt="Cucci Logo" class="logo")
+          .footer__footer__left__titleandnav
+            h5.footer__footer__left__title Disconnect to Reconnect
+            //- .footer__footer__right__nav
+            //-   ul
+            //-     li: a(href="/home.html")
+            //-       img(src="./img/facebook.svg" alt="Facebook" class="footer__footer__right__nav__icon")
+            //-     li: a(href="/activities.html")
+            //-       img(src="./img/instagram.svg" alt="Instagram" lass="footer__footer__right__nav__icon")
+          .footer__footer__left__info 
+            .footer__footer__left__info__item
+              p Downtown Cuchi
+              p P +84 909 907 113
+            .footer__footer__left__info__item
+              p Ap Cay Trac, Pham Van Coi, Cu Chi, HCM City, Vietnam
+        .footer__footer__right.col-xs-12.col-sm-12.col-md-4
+          h6.footer__footer__right__title Discover the latest  Downtown Cuchi Insights
+          .footer__footer__right__form
+            include ../components/textfield
+            +textfield("text", "firstname", "First Name", "")
+            +textfield("email", "email", "Email", "")
+            button.btn.btn--primary(type="submit") Submit
+  .divider.divider--primary
+  .footer__footer
+    .container
+      .row
+        .footer__footer__left.col-xs-12.col-sm-12.col-md-8
+          .body-2.footer__footer__left__copyright Downtown Cuchi 2025 © All rights reserved.
+        .footer__footer__right.col-xs-12.col-sm-12.col-md-4
+          //- social media
+          .footer__footer__right__nav
+            ul
+              li: a(href="/home.html")
+                img(src="./img/facebook.svg" alt="Facebook" class="footer__footer__right__nav__icon")
+              li: a(href="/activities.html")
+                img(src="./img/instagram.svg" alt="Instagram" lass="footer__footer__right__nav__icon")
+
+            

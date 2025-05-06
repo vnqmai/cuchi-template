@@ -1,0 +1,93 @@
+@import "base/variables.scss";
+
+.intro1-section {
+  position: relative;
+
+  &__skew-image {
+      position: relative;
+      &__skewed {
+        // position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%; /* Chiều rộng bằng 50% phần tử cha */
+        aspect-ratio: 724 / 440; /* Tỷ lệ khung hình */
+        background-color: #8B4513; /* Màu nâu */
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--skew-height)), 0 100%);
+        --skew-height: 15%; /* Điều chỉnh độ cao xiên theo tỷ lệ phần trăm */
+        /* Các thuộc tính CSS khác tùy chọn */
+        z-index: 1;
+    
+        @media screen and (max-width: $breakpoint-md) {
+          aspect-ratio: 214 / 160;
+        }
+      }
+    
+      &__image {
+        position: absolute;
+        top: 47.48px;
+        right: 0;
+        width: 70%;
+        aspect-ratio: 995px / 503px;
+        object-fit: cover;
+        z-index: 2;
+    
+        @media screen and (max-width: $breakpoint-md) {
+          width: 90%;
+        }
+      }
+
+      @media screen and (max-width: $breakpoint-md) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* Chiều rộng bằng 50% phần tử cha */
+        aspect-ratio: 214 / 160; /* Tỷ lệ khung hình */
+        
+      }
+  }
+
+  &__card {
+    padding: 55px;
+    position: absolute;
+    top: 127px;
+    left: 128px;
+    width: 50%;
+    // width: 634px;
+    // height: 368px;
+    z-index: 3;
+    background-color: $white-color;
+    border-radius: $border-radius-sm-1;
+
+    &__content {
+      &__title {
+        color: $primary-color;
+        text-transform: uppercase;
+
+        @media screen and (max-width: $breakpoint-md) {
+          font-size: $font-size-xl-1;
+          color: $white-color;
+          
+        }
+      }
+    }
+
+    &__button {
+      .btn {
+        margin-top: 20px;
+        margin-left: auto;
+        width: 185px;
+      }
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+      position: relative;
+      width: 100%;
+      left: 0;
+      top: 10vw;
+      z-index: -1;
+      border-radius: 0;
+      background-color: $primary-color;
+      padding-top: 65vw;
+    }
+  }
+}

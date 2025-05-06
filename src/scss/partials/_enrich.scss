@@ -1,0 +1,67 @@
+.enrich-section {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+  /* Không cần background-color ở đây nữa vì có .content */
+}
+
+.brown-background {
+  background-color: #8B4513; /* Màu nâu */
+  width: 100%;
+  height: auto; /* Điều chỉnh chiều cao của cục màu nâu */
+  padding-bottom: 60%; /* Tạo tỷ lệ khung hình (ví dụ: chiều cao bằng 60% chiều rộng) */
+  position: relative; /* Để chứa .image-container absolute */
+}
+
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  max-height: 80%; /* Giới hạn chiều cao của ảnh */
+  padding: 20px; /* Tạo khoảng trắng xung quanh ảnh */
+  display: flex;
+  justify-content: center; /* Căn giữa ảnh theo chiều ngang */
+  align-items: center; /* Căn giữa ảnh theo chiều dọc */
+}
+
+.image-container img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 8px; /* Bo tròn góc ảnh */
+}
+
+.content {
+  background-color: #f0ad4e; /* Màu vàng của phần nội dung */
+  padding: 20px;
+  text-align: center;
+}
+
+.content h2 {
+  color: #542e17;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.content p {
+  color: #542e17;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.button {
+  display: inline-block;
+  background-color: transparent;
+  color: #2196f3;
+  text-decoration: none;
+  padding: 0;
+}
+
+.button:hover {
+  text-decoration: underline;
+}

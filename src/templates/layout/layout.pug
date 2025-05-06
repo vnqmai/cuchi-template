@@ -1,5 +1,13 @@
 doctype html
 html
-  include ../partials/head.pug
+  include head
   body
+    include header
+
     block content
+
+    include footer 
+
+    script(src="js/vendors.js")
+    script(src="js/plugins.js")
+    script(src="js/main.js")

@@ -1,0 +1,50 @@
+header(class="header")
+  .header__header
+    .container
+      .row
+        .header__header__left.col-xs-12.col-sm-12.col-md-3
+          .header__header__left__logo
+            a(href="/")
+              img(src="./img/cuchi-logo.svg" alt="Cucci Logo" class="logo")
+            img(src="./img/bars.svg" alt="bars" class="more-icon")
+        .header__header__right.col-xs-12.col-sm-12.col-md-9
+          .header__header__right__nav
+            ul
+              li: a(href="/home.html") Homepage
+              li: a(href="/activities.html") Activities
+              li: a(href="/about.html") About Us
+              li: a(href="/contact.html") Contact Us
+          .header__header__right__languages 
+            ul 
+              li: img(src="./img/icons8-american-flag-48.svg" alt="English" class="flag")
+              li: img(src="./img/icons8-vietnam-48.svg" alt="Vietnam" class="flag")
+          .header__header__right__booknow
+            button(class="btn btn--primary") Book Now
+  .header__hero 
+    .container-fluid
+      .row 
+        //- .header__hero(style="background-image: url('./img/cuchi-hero.png');")
+        .header__hero
+          img(src="./img/cuchi-hero.png" alt="Cucci Hero" class="header__hero__image")
+          .header__hero__search 
+            .header__hero__search__filters
+              .header__hero__search__filters__item
+                .header__hero__search__filters__item__title Check in Date
+                .header__hero__search__filters__item__input 
+                  include ../components/datepicker
+              .header__hero__search__filters__item
+                .header__hero__search__filters__item__title Check out Date
+                .header__hero__search__filters__item__input 
+                  include ../components/datepicker
+              .header__hero__search__filters__item
+                .header__hero__search__filters__item__title People
+                .header__hero__search__filters__item__input 
+                  include ../components/select
+                  +select("people", [
+                    { value: "1", label: "1" },
+                    { value: "2", label: "2" },
+                    { value: "3", label: "3" },
+                    { value: "4", label: "4" },
+                    { value: "5", label: "5" }
+                  ], "1")
+            .header__hero__search__submit Search
