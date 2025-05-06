@@ -10,6 +10,7 @@ import clean from 'gulp-clean';
 import concat from 'gulp-concat';
 import terser from 'gulp-terser';
 import cleanCSS from 'gulp-clean-css';
+import rename from 'gulp-rename';
 
 
 import fse from 'fs-extra';
@@ -45,10 +46,18 @@ const paths = {
 export const html = () => gulp.src(paths.html).pipe(gulp.dest(paths.dist));
 
 // Pug → HTML
+// export const compilePug = () =>
+//   gulp.src('./src/templates/*.pug') // source file pug chính
+//     .pipe(pug({ pretty: true }))
+//     .pipe(gulp.dest(paths.dist));
 export const compilePug = () =>
-  gulp.src('./src/templates/*.pug') // source file pug chính
+  gulp.src('./src/templates/*.pug')
     .pipe(pug({ pretty: true }))
+    .pipe(rename((path) => {
+      if (path.basename === 'home') path.basename = 'index';
+    }))
     .pipe(gulp.dest(paths.dist));
+
 
 
 // SCSS
