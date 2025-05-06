@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "gulp dev",
+    "start": "lite-server",
     "build": "gulp build"
   },
   "keywords": [],
@@ -32,6 +32,7 @@
     "imagemin-mozjpeg": "^10.0.0",
     "imagemin-pngquant": "^10.0.0",
     "imagemin-svgo": "^11.0.1",
+    "lite-server": "^2.6.1",
     "pug": "^3.0.3",
     "sass": "^1.87.0"
   },
