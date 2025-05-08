@@ -7,6 +7,8 @@
 
 @use "../../node_modules/jquery-ui/themes/base/all.css";
 
+@use "slick-custom";
+
 
 // Base
 @use "base/reset";
@@ -27,7 +29,12 @@
 // Partials
 @use "partials/hashtags";
 @use "partials/intro1";
+@use "partials/intro2";
 @use "partials/enrich";
+@use "partials/inonetour";
+@use "partials/ourinsights";
+@use "partials/highlightedmoments";
+@use "partials/memories";
 
 // Pages
 @use "pages/home";

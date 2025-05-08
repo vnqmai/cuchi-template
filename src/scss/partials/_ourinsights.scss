@@ -1,0 +1,64 @@
+@import "base/variables.scss";
+
+.our-insights {
+  padding: 160px 125px;
+  position: relative;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__list {
+    margin-top: 98px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(calc(33.33%), 1fr));
+    grid-gap: 17px;
+  }
+
+  &__item {
+    &__image {
+      position: relative;
+      img {
+        width: 100%;
+        aspect-ratio: 380/432;
+        object-fit: cover;
+      }
+    }
+
+    &__description {
+      margin-top: 35px;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-md-3;
+      line-height: 36px;
+      letter-spacing: 0px;
+    }
+
+    &:hover {
+      text-decoration: none;
+      .our-insights__item__image::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #D8D8D8;
+        opacity: 0.5;
+        z-index: 1;
+      }
+    }
+  }
+
+  &__sticky-footer {
+    position: absolute;
+    left: -66px;
+    bottom: 0;
+    transform: rotate(-90deg) translateX(100%);
+
+    font-weight: $font-weight-bold;
+    font-size: $font-size-md-2;
+    line-height: 26px;
+    letter-spacing: 0px;
+
+  }
+}

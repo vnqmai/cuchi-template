@@ -1,0 +1,80 @@
+@import "base/variables.scss";
+
+.highlighted-moments-section {
+  padding: 160px 0 140px;
+  &__title {
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  &__item {
+    // aspect-ratio: 850/567;
+    width: 60%;
+
+    &:hover {
+      .btn-play {
+        display: block;
+      }
+    }
+
+    video {
+      width: 100%;
+      border-radius: 25px;
+      object-fit: cover;
+      background-color: $secondary-color;
+    }
+
+    .btn-play {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 110px;
+      height: 118px;
+      transform: translate(-50%, -50%);
+      border: none;
+      cursor: pointer;
+    }
+
+    &.slick-slide.slick-current.slick-active.slick-center {
+      transform: translateY(30px);
+      transition: transform 0.3s ease;
+
+      @media screen and (max-width: $breakpoint-md) {
+        transform: translateY(10px);
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+  &__navigation {
+    padding: 0 20%;
+    margin: 0 -50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: $breakpoint-md) {
+      margin: 0 -17px;
+    }
+
+    &__prev {
+      position: relative;
+      width: 50px;
+      height: 25px;
+      cursor: pointer;
+      @media screen and (max-width: $breakpoint-md) {
+        width: 17px;
+        height: 8px;
+      }
+    }
+
+    &__next {
+      position: relative;
+      width: 50px;
+      height: 25px;
+      cursor: pointer;
+      @media screen and (max-width: $breakpoint-md) {
+        width: 17px;
+        height: 8px;
+      }
+    }
+  }
+}

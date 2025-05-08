@@ -1,0 +1,114 @@
+@import "base/variables.scss";
+
+.intro2-section {
+  position: relative;
+
+  &__skew-image {
+      position: relative;
+      &__skewed {
+        // position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* Chiều rộng bằng 50% phần tử cha */
+        aspect-ratio: 724 / 440; /* Tỷ lệ khung hình */
+        background-color: #8B4513; /* Màu nâu */
+        --skew-height: 15%; /* Điều chỉnh độ cao xiên theo tỷ lệ phần trăm */
+        clip-path: polygon(0 var(--skew-height), 100% 0, 100% 100%, 0 100%);
+        /* Các thuộc tính CSS khác tùy chọn */
+        z-index: 1;
+
+        padding: 0 113px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    
+        @media screen and (max-width: $breakpoint-md) {
+          padding: 0 25px 30px 25px;
+          aspect-ratio: 430 / 202;
+          align-items: flex-start;
+        }
+
+        &__content {
+          width: 397px;
+
+          @media screen and (max-width: $breakpoint-md) {
+            max-width: 30%;
+          }
+
+          &__title {
+            margin-bottom: 30px;
+            color: $primary-color;
+
+            @media screen and (max-width: $breakpoint-md) {
+              margin-top: 20px;
+              margin-bottom: 10px;
+              font-size: $font-size-xxl;
+              transform: rotate(-4.96deg);
+            }
+          }
+
+          &__subtitle {
+            margin-bottom: 30px;
+            // font-family: Roboto Condensed;
+            color: $primary-color;
+            font-size: $font-size-xxxl;
+            font-weight: $font-weight-lighter;
+            line-height: 56px;
+            letter-spacing: 0px;
+
+            @media screen and (max-width: $breakpoint-md) {
+              // display: none;
+              font-weight: $font-weight-lighter;
+              font-size: $font-size-xl-1;
+              line-height: 30px;
+              letter-spacing: 0px;
+            }
+          }
+
+          &__description {
+            margin-bottom: 30px;
+            color: $white-color;
+
+            @media screen and (max-width: $breakpoint-md) {
+              display: none;
+            }
+          }
+
+          &__button {
+            @media screen and (max-width: $breakpoint-md) {
+              display: none;
+            }
+          }
+        }
+      }
+    
+      &__image {
+        position: absolute;
+        bottom: 97px;
+        left: 128px;
+        width: 44%;
+        aspect-ratio: 637 / 677;
+        object-fit: cover;
+        z-index: 2;
+    
+        @media screen and (max-width: $breakpoint-md) {
+          bottom: 35px;
+          left: 25px;
+          width: 54%;
+          aspect-ratio: 235 / 249;
+        }
+      }
+  }
+
+  &__description {
+    display: none;
+
+    @media screen and (max-width: $breakpoint-md) {
+      padding: 30px;
+      display: block;
+      font-size: $font-size-sm;
+      line-height: 30px;
+      text-align: center;
+    }
+  }
+}

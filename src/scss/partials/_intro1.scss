@@ -1,6 +1,7 @@
 @import "base/variables.scss";
 
 .intro1-section {
+  margin-bottom: calc(300px + 156px); //TODO: check
   position: relative;
 
   &__skew-image {
@@ -88,6 +89,12 @@
       border-radius: 0;
       background-color: $primary-color;
       padding-top: 65vw;
+      border-radius: 0 0 20px 20px;
     }
+  }
+
+  @media screen and (max-width: $breakpoint-md) {
+    margin-bottom: calc(156px); //TODO: check
+    
   }
 }

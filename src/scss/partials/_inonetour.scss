@@ -1,0 +1,80 @@
+@import "base/variables.scss";
+
+.inonetour-section {
+  padding: 75px 82px 14px 141px;
+  background: url("../img/Gradient - Purple 1@4x.png") no-repeat center center / cover;
+
+  @media screen and (max-width: $breakpoint-md) {
+    padding: 0
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: $breakpoint-md) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__content {
+      @media screen and (max-width: $breakpoint-md) {
+        display: contents;
+      }
+      &__title {
+        margin-bottom: 20px;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-xxxl;
+        line-height: 56px;
+        letter-spacing: 0px;
+        color: $primary-color;
+        @media screen and (max-width: $breakpoint-md) {
+          margin-top: -25px;
+          line-height: 40px;
+          letter-spacing: 0px;
+          order: 1;
+        }     
+      }
+
+      &__description {
+        margin-bottom: 10px;
+        // font-family: Roboto Condensed;
+        font-weight: $font-weight-bold;
+        font-size: 25px;
+        line-height: 56px;
+        letter-spacing: 0px;
+        color: $primary-color; 
+        @media screen and (max-width: $breakpoint-md) {
+          order: 3;
+          margin-top: 24px;
+          color: $white-color; 
+          line-height: 35px;
+          text-align: center;
+          width: 100%;
+        }   
+      }
+
+      &__button {
+        min-width: 185px;
+        @media screen and (max-width: $breakpoint-md) {
+          order: 4;
+          margin: 24px 0;
+        }  
+      }
+    }
+    &__image {
+      img {
+        aspect-ratio: 538/435;
+        object-fit: cover;
+        @media screen and (max-width: $breakpoint-md) {
+          aspect-ratio: 249/201;
+          max-width: 249px;
+        }  
+      }
+      @media screen and (max-width: $breakpoint-md) {
+        order: 2;
+        margin-top: 32px;
+        width: 100%;
+        text-align: center;
+      }  
+    }
+  }
+}

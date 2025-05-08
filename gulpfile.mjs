@@ -28,17 +28,21 @@ const paths = {
     'src/css/vendors/bootstrap.min.css'
   ],
   pluginsCss: [
-    'src/css/plugins/jquery-ui.min.css'
+    'src/css/plugins/jquery-ui.min.css',
+    'src/css/plugins/slick-theme.css',
+    'src/css/plugins/slick.css'
   ],
   vendors: [
     'src/js/vendors/jquery-3.7.1.min.js',
     'src/js/vendors/bootstrap.bundle.min.js'
   ],
   plugins: [
-    'src/js/plugins/jquery-ui.min.js'
+    'src/js/plugins/jquery-ui.min.js',
+    'src/js/plugins/slick.min.js'
   ],
   js: './src/js/**/*.js',
   img: './src/img/**/*.{jpg,jpeg,png,gif,svg,webp}',
+  video: './src/videos/**/*.{mp4,webm}',
   dist: './dist',
 };
 
@@ -105,6 +109,17 @@ export const copyImages = async () => {
   );
 };
 
+export const copyVideos = async () => {
+  const files = glob.sync(paths.video);
+  await Promise.all(
+    files.map(async (file) => {
+      const destPath = file.replace('src/videos', 'dist/videos');
+      await fse.ensureDir(path.dirname(destPath));
+      await fse.copy(file, destPath);
+    })
+  );
+};
+
 // Vendors task
 export const vendors = () =>
   gulp.src(paths.vendors)
@@ -150,9 +165,10 @@ export const serve = () => {
   gulp.watch(paths.js, scripts).on('change', server.reload);
   // gulp.watch(paths.img, images).on('change', server.reload);
   gulp.watch('src/img/**/*', copyImages).on('change', server.reload);
+  gulp.watch('src/videos/**/*', copyVideos).on('change', server.reload);
 
 };
 
-export const build = gulp.series(cleanDist, gulp.parallel(html, compilePug, styles, vendors, plugins, scripts, copyImages, vendorsCSS, pluginsCSS));
+export const build = gulp.series(cleanDist, gulp.parallel(html, compilePug, styles, vendors, plugins, scripts, copyImages, copyVideos, vendorsCSS, pluginsCSS));
 
 export default gulp.series(build, serve);
