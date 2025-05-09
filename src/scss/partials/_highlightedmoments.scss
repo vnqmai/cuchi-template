@@ -7,8 +7,8 @@
     text-align: center;
   }
   &__item {
-    // aspect-ratio: 850/567;
     width: 60%;
+    aspect-ratio: 850/567;
 
     &:hover {
       .btn-play {
