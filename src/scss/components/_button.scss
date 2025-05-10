@@ -11,6 +11,10 @@
   font-weight: $font-weight-bold;
   font-size: $font-size-xxs;
 
+  &__icon {
+    margin-left: 12px;
+  }
+
   
   &--primary {
     background-color: $primary-color;
@@ -19,5 +23,20 @@
     &:hover {
       background-color: $primary-color;
     }
+  }
+
+  &--disabled {
+    background-color: $gray-3-color;
+    color: $gray-4-color;
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: $gray-3-color;
+      color: $gray-4-color;
+    }
+  }
+
+  &--fullwidth {
+    width: 100%;
   }
 }

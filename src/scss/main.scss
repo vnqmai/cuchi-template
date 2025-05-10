@@ -38,8 +38,10 @@
 @use "partials/teambuilding";
 @use "partials/aboutus";
 @use "partials/meettheteam";
+@use "partials/contactusform";
 
 // Pages
 @use "pages/home";
 @use "pages/activities";
 @use "pages/about";
+@use "pages/contact";

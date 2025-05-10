@@ -1,0 +1,33 @@
+@import "base/variables.scss";
+
+.contactusform-section {
+  &__block {
+    margin: 115px 154px 89px 162px;
+  }
+
+  &__title {
+    margin-bottom: 90px;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-xxxl;
+    line-height: 65px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+
+  &__form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &__input {
+      margin: auto;
+      width: 450px;
+    }
+
+    &__button {
+      margin: 80px auto 0;
+      width: 450px;
+    }
+  }
+}
