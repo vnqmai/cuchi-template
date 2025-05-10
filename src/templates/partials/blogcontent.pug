@@ -1,0 +1,51 @@
+include ../components/blogDetail
+
+section.blogcontent-section
+  .blogcontent-section__block
+    +blogDetail(
+      "Escape the City: Cozy Countryside Stays Await You!", 
+      "In the heart of the bustling city, it’s easy to find yourself yearning for a change of pace. The endless traffic, noise, and fast-paced lifestyle can leave anyone craving serenity and a breath of fresh air. That’s where The Downtown Cuchi comes in — a countryside escape that promises peace, comfort, and a memorable getaway.", 
+      "Mark Nguyen",
+      "12 Dec, 2024",
+      null,
+      "pinned"
+    )
+    img.blogcontent-section__image(src="../img/blog-1.jpg", alt="")
+    +blogDetail(
+      "A Breath of Fresh Air", 
+      "Nestled in the tranquil countryside of Củ Chi, The Downtown Cuchi offers an idyllic retreat where lush greenery and open spaces replace the concrete jungle. It’s the perfect destination to disconnect from your daily routine and reconnect with nature. Imagine waking up to the sound of chirping birds, surrounded by breathtaking views of the countryside — a refreshing way to start your day.",
+    )
+    +blogDetail(
+      "Cozy Stay with a View", 
+      "Our thoughtfully designed accommodations are tailored for your comfort. Whether you’re looking for a romantic getaway, a family retreat, or a solo adventure, The Downtown Cuchi has the perfect room to suit your needs. Each room boasts cozy interiors, modern amenities, and stunning views of the surrounding countryside. Relax on your private balcony with a cup of coffee or curl up with a good book. The peaceful ambiance will melt your stress away, leaving you refreshed and recharged.",
+    )
+    
+    //- TODO: add custom slick here
+    .blogcontent-section__slick-block
+      .blogcontent-section__slick.cucci-slick-2
+        .blogcontent-section__slick__item.img-container
+          img(src="../img/blog-2.jpg", alt="")
+        .blogcontent-section__slick__item.img-container
+          img(src="../img/blog-3.jpg", alt="") 
+      .blogcontent-section__slick-block__navigation 
+        img.cucci-slick-next(src="../img/arrow-next.svg", alt="")
+
+
+    +blogDetail(
+      "Activities to Enrich Your Stay", 
+      "At The Downtown Cuchi, there’s never a dull moment. While the serene surroundings invite you to unwind, we also offer a variety of activities to make your stay even more memorable:", 
+      null,
+      null,
+      {
+        'Outdoor Movie Nights': 'Enjoy your favorite films under a blanket of stars, complete with cozy seating and snacks.',
+        'Ping Pong and Billiards': 'Challenge your friends and family to a friendly game, or perfect your skills during a laid-back afternoon.',
+        'Team Building Activities': 'Ideal for groups or corporate retreats, our team-building sessions foster fun, collaboration, and connection.',
+        'Cycling Adventures': 'Explore scenic trails that wind through the countryside, offering glimpses of local life and nature’s beauty.',
+        'Delicious Traditional Cuisine': 'Savor the flavors of Vietnam with meals prepared using fresh, locally sourced ingredients.',
+      }
+    )
+    +blogDetail(
+      "Cozy Stay with a View", 
+      "Our thoughtfully designed accommodations are tailored for your comfort. Whether you’re looking for a romantic getaway, a family retreat, or a solo adventure, The Downtown Cuchi has the perfect room to suit your needs. Each room boasts cozy interiors, modern amenities, and stunning views of the surrounding countryside. Relax on your private balcony with a cup of coffee or curl up with a good book. The peaceful ambiance will melt your stress away, leaving you refreshed and recharged.",
+    )
+  

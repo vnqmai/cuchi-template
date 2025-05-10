@@ -1,0 +1,16 @@
+mixin blogDetail(title="", content="", createdBy="", createdAt="", data="", className="")
+  div(class=["blog-detail", className])
+    .blog-detail__left
+      .blog-detail__left__author= createdBy
+      .blog-detail__left__date= createdAt
+    .blog-detail__right
+      if title
+        .blog-detail__right__title= title
+      if content
+        p.blog-detail__right__content= content
+      if data
+        ul.blog-detail__right__list
+          each val, key in data
+            li.blog-detail__right__list__item
+              span.blog-detail__right__list__item__key #{key}:
+              |  #{val}

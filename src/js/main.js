@@ -55,4 +55,8 @@ $(function () {
       },
     ],
   });
+  $(".cucci-slick-2").slick({
+    nextArrow: $('.cucci-slick-next'),
+    slidesToShow: 1,
+  });
 });

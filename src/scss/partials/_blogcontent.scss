@@ -1,0 +1,39 @@
+@import "base/variables.scss";
+
+.blogcontent-section {
+  &__block {
+    margin: 107px 0 56px 0;
+  }
+
+  .blog-detail {
+    padding: 0 130px 40px 130px;
+  }
+
+  &__image {
+    margin: 50px 0 90px 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__slick-block {
+    margin: 50px 0 90px 0;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+
+    &__navigation {
+      padding: 0 0 46px 35px;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+
+  &__slick {
+    width: 86%;
+    &__item {
+      width: 790px;
+      height: 100%;
+    }
+  }
+}

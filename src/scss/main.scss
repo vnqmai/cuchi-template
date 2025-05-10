@@ -21,6 +21,7 @@
 @use "components/datepicker";
 @use "components/select";
 @use "components/textfield";
+@use "components/blogDetail";
 
 // Layout
 @use "layout/header";
@@ -39,9 +40,11 @@
 @use "partials/aboutus";
 @use "partials/meettheteam";
 @use "partials/contactusform";
+@use "partials/blogcontent";
 
 // Pages
 @use "pages/home";
 @use "pages/activities";
 @use "pages/about";
 @use "pages/contact";
+@use "pages/blog";
