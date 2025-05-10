@@ -35,6 +35,11 @@
 @use "partials/ourinsights";
 @use "partials/highlightedmoments";
 @use "partials/memories";
+@use "partials/teambuilding";
+@use "partials/aboutus";
+@use "partials/meettheteam";
 
 // Pages
 @use "pages/home";
+@use "pages/activities";
+@use "pages/about";

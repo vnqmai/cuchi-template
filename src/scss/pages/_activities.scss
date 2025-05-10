@@ -1,0 +1,9 @@
+@import "base/variables.scss";
+
+.activities-page {
+  .teambuilding-section {
+    @media screen and (max-width: $breakpoint-md) {
+        display: none;
+    }
+  }
+}
