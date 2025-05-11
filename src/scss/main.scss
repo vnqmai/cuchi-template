@@ -22,6 +22,7 @@
 @use "components/select";
 @use "components/textfield";
 @use "components/blogDetail";
+@use "components/bookingfeature";
 
 // Layout
 @use "layout/header";
@@ -41,6 +42,7 @@
 @use "partials/meettheteam";
 @use "partials/contactusform";
 @use "partials/blogcontent";
+@use "partials/bookingintro";
 
 // Pages
 @use "pages/home";
@@ -48,3 +50,4 @@
 @use "pages/about";
 @use "pages/contact";
 @use "pages/blog";
+@use "pages/booking";

@@ -1,0 +1,26 @@
+@import "base/variables.scss";
+
+.bookingintro-section {
+  &__block {
+    margin: 137px 157px 176px 159px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-xxxl;
+    line-height: 65px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+
+  &__content {
+    margin: auto;
+    max-width: 626px;
+    font-weight: $font-weight-normal;
+    font-size: $font-size-md-3;
+    line-height: 30px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+}

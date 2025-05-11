@@ -1,0 +1,37 @@
+mixin bookingfeature(className="", title="", highlights=[], description="", startDate="", endDate="", stock="", images=[ { image: "../img/booking-1.jpg", texts: ["Big bedroom", "Large bathroom"] }, { image: "../img/booking-2.jpg", texts: ["100% ", "Viewfield"] }, { image: "../img/booking-3.jpg", }, { image: "../img/booking-4.jpg", }, ])
+  section.bookingfeature-section
+      div(class=["bookingfeature-section__block", className])
+        .bookingfeature-section__left
+          .bookingfeature-section__left__title= title
+          each highlight in highlights
+            .bookingfeature-section__left__highlight= highlight
+          .bookingfeature-section__left__description= description
+          .bookingfeature-section__left__booking
+            .bookingfeature-section__left__booking__content
+              img.bookingfeature-section__left__booking__content__icon(src="../img/calendar.png", alt="")
+              .bookingfeature-section__left__booking__content__main
+                .bookingfeature-section__left__booking__content__main__title Selected Date
+                .bookingfeature-section__left__booking__content__main__description
+                  span.bookingfeature-section__left__booking__content__main__description__label From 
+                  span.bookingfeature-section__left__booking__content__main__description__date= startDate  
+                  span.bookingfeature-section__left__booking__content__main__description__label To 
+                  span.bookingfeature-section__left__booking__content__main__description__date= endDate
+            button.bookingfeature-section__left__booking__button.btn.btn--primary  Book Now
+          .bookingfeature-section__left__stock= stock
+        .bookingfeature-section__right
+          each item in images
+            .bookingfeature-section__right__item
+              img.bookingfeature-section__right__item__image(src=item.image, alt="")
+              if item.texts
+                each text in item.texts
+                  .bookingfeature-section__right__item__content
+                    .bookingfeature-section__right__item__content__text= text
+          //- .bookingfeature-section__right__item
+          //-   img.bookingfeature-section__right__item__image(src="../img/booking-2.jpg", alt="")
+          //-   .bookingfeature-section__right__item__content
+          //-     .bookingfeature-section__right__item__content__text 100%
+          //-     .bookingfeature-section__right__item__content__text Viewfield
+          //- .bookingfeature-section__right__item
+          //-   img.bookingfeature-section__right__item__image(src="../img/booking-3.jpg", alt="")
+          //- .bookingfeature-section__right__item
+          //-   img.bookingfeature-section__right__item__image(src="../img/booking-4.jpg", alt="")

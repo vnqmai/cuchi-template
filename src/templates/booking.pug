@@ -1,0 +1,60 @@
+extends layout/layout.pug
+include components/bookingfeature
+
+block content
+  .booking-page
+    include partials/bookingintro
+    +bookingfeature(
+      "",
+      "2 Queen Bedrooms",
+      ["700K/room", "Suitable for 4+ people"],
+      "Free breakfast, drink, fruit. 20% Discount on the traditional Cuisine",
+      "MON, NOV 4, 2025",
+      "SUN, NOV 8, 2025",
+      "1 Room Available"
+    )
+    +bookingfeature(
+      "reverse",
+      "1 Queen Bedroom",
+      ["450K/room", "Suitable for 2+ people"],
+      "Free breakfast, drink, fruit. 20% Discount on the traditional Cuisine",
+      "MON, NOV 4, 2025",
+      "SUN, NOV 8, 2025",
+      "1 Room Available"
+    )
+    +bookingfeature(
+      "",
+      "Camping Tent",
+      ["400K/tent", "Suitable for 1+ person"],
+      "Free breakfast, drink, fruit. 20% Discount on the traditional Cuisine",
+      "MON, NOV 4, 2025",
+      "SUN, NOV 8, 2025",
+      "2 Tents Available"
+    )
+    .bookingplace-section
+      .bookingplace-section__block
+        .bookingplace-section__item
+          h1.bookingplace-section__title OWN A PLACE
+          .bookingplace-section__subtitle Suitable for 15+ people
+          img.bookingplace-section__image(src="../img/bookingplace-1.jpg", alt="")
+        .bookingplace-section__item
+          img.bookingplace-section__image(src="../img/bookingplace-2.jpg", alt="")
+          .bookingfeature-section__left__booking
+            .bookingfeature-section__left__booking__content
+              img.bookingfeature-section__left__booking__content__icon(src="../img/calendar.png", alt="")
+              .bookingfeature-section__left__booking__content__main
+                .bookingfeature-section__left__booking__content__main__title Selected Date
+                .bookingfeature-section__left__booking__content__main__description
+                  span.bookingfeature-section__left__booking__content__main__description__label From 
+                  span.bookingfeature-section__left__booking__content__main__description__date= startDate  
+                  span.bookingfeature-section__left__booking__content__main__description__label To 
+                  span.bookingfeature-section__left__booking__content__main__description__date= endDate
+            button.bookingfeature-section__left__booking__button.btn.btn--primary  Book Now
+        .bookingplace-section__item
+          .bookingplace-section__content
+            p Free breakfast, drink, fruit.
+            p Free 2 dishes from our menu. 
+            p Free 1 pack (24 x 375ml cans) of Pepsi.
+            p 20% Discount on the traditional Cuisine.
+          img.bookingplace-section__image(src="../img/bookingplace-3.jpg", alt="")
+    include partials/ourinsights

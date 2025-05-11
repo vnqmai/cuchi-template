@@ -1,0 +1,62 @@
+@import "base/variables.scss";
+
+.booking-page {
+  .bookingplace-section {
+    &__block {
+      margin: 0 0 59px 139px;
+      display: flex;
+      gap: 33px;
+      height: 665px;
+    }
+
+    &__item {
+      &:nth-of-type(1) {
+        width: 281px;
+        .bookingplace-section__image {
+          width: 281px;
+          height: 442px;
+          object-fit: cover;
+        }
+      }
+      &:nth-of-type(2) {
+        width: 383px;
+        .bookingplace-section__image {
+          margin-bottom: 50px;
+          width: 383px;
+          height: 500px;
+          object-fit: cover;
+        }
+      }
+      &:nth-of-type(3) {
+        width: 574px;
+        .bookingplace-section__image {
+          width: 574px;
+          height: 343px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &__title {
+      line-height: 65px;
+    }
+
+    &__subtitle {
+      margin-bottom: 33px;
+      // font-family: Roboto Condensed;
+      font-weight: $font-weight-bolder;
+      font-size: $font-size-xl-1;
+      line-height: 56px;
+      letter-spacing: 0px;
+    }
+
+    &__content {
+      margin-bottom: 9px;
+      min-height: 150px;
+    }
+
+    &__image {
+      border-radius: 20px;
+    }
+  }
+}
