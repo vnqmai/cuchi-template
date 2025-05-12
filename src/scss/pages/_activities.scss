@@ -1,6 +1,42 @@
 @import "base/variables.scss";
 
 .activities-page {
+  display: flex;
+  flex-direction: column;
+  .memories-section {
+    order: 1;
+  }
+  .inonetour-section {
+    order: 2;
+  }
+  .highlighted-moments-section {
+    order: 3;
+  }
+  .teambuilding-section {
+    order: 4;
+  }
+  .our-insights {
+    order: 5;
+  }
+
+  @media screen and (max-width: $breakpoint-md) {
+    .memories-section {
+      order: 1;
+    }
+    .highlighted-moments-section {
+      order: 2;
+    }
+    .inonetour-section {
+      order: 3;
+    }
+    .teambuilding-section {
+      order: 4;
+    }
+    .our-insights {
+      order: 5;
+    }
+  }
+
   .teambuilding-section {
     @media screen and (max-width: $breakpoint-md) {
         display: none;
