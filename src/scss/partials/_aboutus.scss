@@ -8,7 +8,7 @@
 
     @media screen and (max-width: $breakpoint-md) {
       flex-wrap: wrap;
-      margin: 65px 30px 89px;
+      margin: 65px 30px 137px;
       gap: 50px;
     }
   }
@@ -71,8 +71,12 @@
       }
 
       @media screen and (max-width: $breakpoint-md) {
-        width: 110px;
+        // width: 110px;
+        // height: 268px;
+        width: auto;
         height: 268px;
+        aspect-ratio: 110/268;
+        // height: 268px;
       }
 
       img {
