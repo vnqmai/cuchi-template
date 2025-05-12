@@ -3,6 +3,10 @@
 .contactusform-section {
   &__block {
     margin: 115px 154px 89px 162px;
+
+    @media screen and (max-width: $breakpoint-md) {
+      margin: 40px 10px 80px;
+    }
   }
 
   &__title {
@@ -12,6 +16,12 @@
     line-height: 65px;
     letter-spacing: 0px;
     text-align: center;
+
+    @media screen and (max-width: $breakpoint-md) {
+      margin-bottom: 30px;
+      font-size: $font-size-xxl;
+      line-height: 40px;
+    }
   }
 
   &__form {
@@ -23,11 +33,18 @@
     &__input {
       margin: auto;
       width: 450px;
+      @media screen and (max-width: $breakpoint-md) {
+        width: calc(100% - 20px);
+      }
     }
 
     &__button {
       margin: 80px auto 0;
       width: 450px;
+      @media screen and (max-width: $breakpoint-md) {
+        margin: 20px auto 0;
+        width: calc(100% - 20px);
+      }
     }
   }
 }

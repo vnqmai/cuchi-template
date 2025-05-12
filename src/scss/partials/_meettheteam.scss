@@ -10,6 +10,12 @@
       align-items: center;
       gap: 84px;
 
+      @media screen and (max-width: $breakpoint-md) {
+        padding: 0 0 0 22px;
+        align-items: flex-start;
+        gap: 0;
+      }
+
       &::before {
         position: absolute;
         content: "";
@@ -30,12 +36,26 @@
             font-weight: $font-weight-lighter;
             color: $primary-color;
             line-height: 56px;
+
+            @media screen and (max-width: $breakpoint-md) {
+              margin-top: 40px;
+              margin-bottom: 9px;
+              font-size: $font-size-xl-1;
+              transform: rotate(-8.14deg);
+            }
           }
 
           &__title {
             margin-bottom: 50px;
             color: $primary-color;
             line-height: 56px;
+            @media screen and (max-width: $breakpoint-md) {
+              margin-bottom: 0;
+              // font-family: Roboto Condensed;
+              font-size: 50px; //TODO: variable
+              font-weight: 800; //TODO: variable
+              transform: rotate(-8.14deg);
+            }
           }
 
           &__subtitle {
@@ -46,17 +66,28 @@
             font-weight: $font-weight-bolder;
             line-height: 56px;
             letter-spacing: 0px;
+
+            @media screen and (max-width: $breakpoint-md) {
+              display: none;
+            }
           }
 
           &__description {
             margin-bottom: 30px;
             color: $white-color;
+
+            @media screen and (max-width: $breakpoint-md) {
+              display: none;
+            }
           }
 
           &__button {
             margin-left: auto;
             display: block;
             min-width: 185px;
+            @media screen and (max-width: $breakpoint-md) {
+              display: none;
+            }
           }
         }
       }
@@ -69,6 +100,12 @@
               margin-left: 70px;
               width: 381px;
               height: 458px;
+
+              @media screen and (max-width: $breakpoint-md) {
+                margin-left: 24px;
+                width: 198px;
+                height: 238px;
+              }
             }
           }
 
@@ -80,13 +117,25 @@
             gap: 44px;
             .meettheteam-section__skew-image__images__item {
               &:nth-of-type(1) {
+                margin-top: calc(38px + 28px);
                 width: 336px;
                 height: 406px;
-                margin-top: calc(38px + 28px);
+
+                @media screen and (max-width: $breakpoint-md) {
+                  margin-top: -22px;
+                  width: 123px;
+                  height: 148px;
+                }
               }
               &:nth-of-type(2) {
                 width: 240px;
                 height: 280px;
+
+                @media screen and (max-width: $breakpoint-md) {
+                  margin-top: -33px;
+                  width: 105px;
+                  height: 124px;
+                }
               }
             }
           }
