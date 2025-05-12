@@ -5,34 +5,37 @@
 
   &__skew-image {
       position: relative;
-      &__skewed {
-        // position: absolute;
+
+      &::before {
+        position: absolute;
+        content: "";
         top: 0;
         left: 0;
-        width: 100%; /* Chiều rộng bằng 50% phần tử cha */
-        aspect-ratio: 724 / 440; /* Tỷ lệ khung hình */
-        background-color: #8B4513; /* Màu nâu */
-        --skew-height: 15%; /* Điều chỉnh độ cao xiên theo tỷ lệ phần trăm */
+        width: 100%;
+        height: 100%;
+        background-color: $secondary-color;
+        --skew-height: 15%;
         clip-path: polygon(0 var(--skew-height), 100% 0, 100% 100%, 0 100%);
-        /* Các thuộc tính CSS khác tùy chọn */
-        z-index: 1;
-
-        padding: 0 113px;
+        z-index: -1;
+      }
+      &__skewed {
         display: flex;
         justify-content: flex-end;
         align-items: center;
     
         @media screen and (max-width: $breakpoint-md) {
-          padding: 0 25px 30px 25px;
+          padding: 0 15px 30px 25px;
           aspect-ratio: 430 / 202;
           align-items: flex-start;
         }
 
         &__content {
+          padding: 116px 0 97px 0;
           width: 397px;
 
           @media screen and (max-width: $breakpoint-md) {
-            max-width: 30%;
+            padding: 0;
+            max-width: 35%;
           }
 
           &__title {
@@ -58,6 +61,7 @@
 
             @media screen and (max-width: $breakpoint-md) {
               // display: none;
+              margin-bottom: 0;
               font-weight: $font-weight-lighter;
               font-size: $font-size-xl-1;
               line-height: 30px;
@@ -75,6 +79,7 @@
           }
 
           &__button {
+            min-width: 185px;
             @media screen and (max-width: $breakpoint-md) {
               display: none;
             }

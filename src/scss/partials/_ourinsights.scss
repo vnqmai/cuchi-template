@@ -4,20 +4,27 @@
   padding: 160px 125px;
   position: relative;
 
+  @media screen and (max-width: $breakpoint-md) {
+    padding: 117px 0 74px;
+  }
+
   &__title {
     text-align: center;
+    margin-bottom: 0;
   }
 
   &__list {
     margin-top: 98px;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(calc(33.33%), 1fr));
-    grid-gap: 17px;
+    @media screen and (max-width: $breakpoint-md) {
+      margin-top: 60px;
+    }
   }
 
   &__item {
+    margin: 10px;
     &__image {
       position: relative;
+      width: 100%;
       img {
         width: 100%;
         aspect-ratio: 380/432;
@@ -49,6 +56,26 @@
     }
   }
 
+  &__navigation {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    &__prev {
+      position: relative;
+      width: 17px;
+      height: 8px;
+      cursor: pointer;
+    }
+
+    &__next {
+      position: relative;
+      width: 17px;
+      height: 8px;
+      cursor: pointer;
+    }
+  }
+
   &__sticky-footer {
     position: absolute;
     left: -66px;
@@ -60,5 +87,8 @@
     line-height: 26px;
     letter-spacing: 0px;
 
+    @media screen and (max-width: $breakpoint-md) {
+      display: none;
+    }
   }
 }

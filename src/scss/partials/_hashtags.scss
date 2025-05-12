@@ -1,3 +1,5 @@
+@import "base/variables.scss";
+
 .hashtags-section {
   padding: 142px 0 37px 0;
   display: flex;
@@ -6,4 +8,8 @@
   gap: 26px;
   justify-content: center;
   text-align: center;
+
+  @media screen and (max-width: $breakpoint-md) {
+    padding: 40px 0;
+  }
 }

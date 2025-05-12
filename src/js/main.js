@@ -59,4 +59,29 @@ $(function () {
     nextArrow: $('.cucci-slick-next'),
     slidesToShow: 1,
   });
+  $(".cucci-slick-3").slick({
+    prevArrow: $('.cucci-slick-3-prev'),
+    nextArrow: $('.cucci-slick-3-next'),
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
+  $("#header-more-button").on("click", function () {
+    $("#header-more-button").toggleClass("hide");
+    $("#header-drawer").toggleClass("show");
+  });
+
+  $("#header-close-button").on("click", function () {
+    $("#header-more-button").toggleClass("hide");
+    $("#header-drawer").toggleClass("show");
+  });
 });

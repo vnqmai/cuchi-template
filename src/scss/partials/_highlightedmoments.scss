@@ -2,10 +2,34 @@
 
 .highlighted-moments-section {
   padding: 160px 0 140px;
+
+  @media screen and (max-width: $breakpoint-md) {
+    padding: 40px 0 103px;
+  }
+
   &__title {
     margin-bottom: 80px;
     text-align: center;
+    @media screen and (max-width: $breakpoint-md) {
+      margin-bottom: 20px;
+      font-size: $font-size-xl-1;
+      font-weight: $font-weight-bold;
+      line-height: 56px;
+    }
   }
+
+  &__slider {
+    position: relative;
+  }
+
+  .slick-track {
+    padding-bottom: 50px;
+
+    @media screen and (max-width: $breakpoint-md) {
+      padding-bottom: 20px;
+    }
+  }
+
   &__item {
     width: 60%;
     aspect-ratio: 850/567;
@@ -20,6 +44,7 @@
 
     video {
       width: 100%;
+      height: 100%;
       border-radius: 25px;
       object-fit: cover;
       background-color: $secondary-color;
@@ -35,47 +60,66 @@
       transform: translate(-50%, -50%);
       border: none;
       cursor: pointer;
-    }
-
-    &.slick-slide.slick-current.slick-active.slick-center {
-      transform: translateY(30px);
-      transition: transform 0.3s ease;
 
       @media screen and (max-width: $breakpoint-md) {
-        transform: translateY(10px);
+        top: 28%;
+        width: 33px;
+        height: 33px;
+      }
+    }
+
+    &.slick-slide.slick-current.slick-center {
+      transform: translateY(0px);
+      transition: transform 0.3s ease;
+      &.slick-active {
+        transform: translateY(30px);
         transition: transform 0.3s ease;
+  
+        @media screen and (max-width: $breakpoint-md) {
+          transform: translateY(27px);
+          transition: transform 0.3s ease;
+        }
       }
     }
   }
   &__navigation {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    transform: translateY(-100%);
+
     padding: 0 20%;
-    margin: 0 -50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     @media screen and (max-width: $breakpoint-md) {
-      margin: 0 -17px;
+      padding: 0 10%;
     }
 
     &__prev {
       position: relative;
+      transform: translateX(-100%);
       width: 50px;
       height: 25px;
       cursor: pointer;
       @media screen and (max-width: $breakpoint-md) {
         width: 17px;
         height: 8px;
+        transform: translateX(calc(-100% - 10px));
       }
     }
 
     &__next {
       position: relative;
+      transform: translateX(100%);
       width: 50px;
       height: 25px;
       cursor: pointer;
       @media screen and (max-width: $breakpoint-md) {
         width: 17px;
         height: 8px;
+        transform: translateX(calc(100% + 10px));
       }
     }
   }

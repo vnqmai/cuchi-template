@@ -6,7 +6,7 @@ header(class="header")
           .header__header__left__logo
             a(href="/")
               img(src="./img/cuchi-logo.svg" alt="Cucci Logo" class="logo")
-            img(src="./img/bars.svg" alt="bars" class="more-icon")
+            img(id="header-more-button", src="./img/bars.svg" alt="bars" class="more-icon")
         .header__header__right.col-xs-12.col-sm-12.col-md-9
           .header__header__right__nav
             ul
@@ -15,13 +15,35 @@ header(class="header")
               li: a(href="/about.html") About Us
               li: a(href="/contact.html") Contact Us
               li: a(href="/blog.html") Blog
-              li: a(href="/booking.html") Booking
           .header__header__right__languages 
             ul 
               li: img(src="./img/icons8-american-flag-48.svg" alt="English" class="flag")
               li: img(src="./img/icons8-vietnam-48.svg" alt="Vietnam" class="flag")
           .header__header__right__booknow
-            button(class="btn btn--primary") Book Now
+            button(class="btn btn--primary", onclick="window.open('/booking.html', '_self')") Book Now
+      .header__drawer(id="header-drawer")
+        .header__menu
+          img.header__menu__close(id="header-close-button", src="../img/close.svg", alt="")
+          a.header__menu__item(href="/")
+            .header__menu__item__icon
+              img(src="../img/menu-home.svg", alt="")
+            .header__menu__item__title Home
+          a.header__menu__item(href="/booking.html")
+            .header__menu__item__icon
+              img(src="../img/menu-booking.svg", alt="")
+            .header__menu__item__title Booking
+          a.header__menu__item(href="/activities.html")
+            .header__menu__item__icon
+              img(src="../img/menu-activities.svg", alt="")
+            .header__menu__item__title Activities
+          a.header__menu__item(href="/about.html")
+            .header__menu__item__icon
+              img(src="../img/menu-about.svg", alt="")
+            .header__menu__item__title About Us
+          a.header__menu__item(href="/contact.html")
+            .header__menu__item__icon
+              img(src="../img/menu-contact.svg", alt="")
+            .header__menu__item__title Contact Us
   .header__hero 
     .container-fluid
       .row 
