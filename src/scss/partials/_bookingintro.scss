@@ -3,6 +3,10 @@
 .bookingintro-section {
   &__block {
     margin: 137px 157px 176px 159px;
+
+    @media screen and (max-width: $breakpoint-md) {
+      margin: 62px 8px 58px 11px;
+    }
   }
 
   &__title {
@@ -12,6 +16,13 @@
     line-height: 65px;
     letter-spacing: 0px;
     text-align: center;
+
+    @media screen and (max-width: $breakpoint-md) {
+      margin-bottom: 10px;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-xl-1;
+      line-height: 40px;
+    }
   }
 
   &__content {
@@ -22,5 +33,11 @@
     line-height: 30px;
     letter-spacing: 0px;
     text-align: center;
+
+    @media screen and (max-width: $breakpoint-md) {
+      font-weight: $font-weight-normal;
+      font-size: $font-size-md;
+      line-height: 30px;
+    }
   }
 }

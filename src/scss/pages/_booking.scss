@@ -2,6 +2,11 @@
 
 .booking-page {
   .bookingplace-section {
+
+    @media screen and (max-width: $breakpoint-md) {
+      display: none;
+    }
+
     &__block {
       margin: 0 0 59px 139px;
       display: flex;

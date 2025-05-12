@@ -7,8 +7,18 @@
     display: flex;
     align-items: center;
 
+    @media screen and (max-width: $breakpoint-md) {
+      margin: 0 0 143px 0;
+      padding: 0 20px;
+      flex-direction: column;
+    }
+
     &.reverse {
       flex-direction: row-reverse;
+      margin: 0 95px 134px 0;
+      @media screen and (max-width: $breakpoint-md) {
+        flex-direction: column;
+      }
 
       .bookingfeature-section__left {
         text-align: right;
@@ -31,6 +41,12 @@
       font-size: $font-size-xxxl;
       line-height: 56px;
       letter-spacing: 0px;
+
+      @media screen and (max-width: $breakpoint-md) {
+        font-weight: $font-weight-bold;
+        font-size: $font-size-xxl;
+        line-height: 50px;
+      }
     }
 
     &__highlight {
@@ -39,6 +55,11 @@
       font-size: $font-size-xl-1;
       line-height: 56px;
       letter-spacing: 0px;
+      @media screen and (max-width: $breakpoint-md) {
+        font-weight: $font-weight-bolder;
+        font-size: 25px; //TODO: variable
+        line-height: 56px;
+      }
     }
 
     &__description {
@@ -48,6 +69,12 @@
       font-size: $font-size-md;
       line-height: 30px;
       letter-spacing: 0px;
+
+      @media screen and (max-width: $breakpoint-md) {
+        font-weight: $font-weight-normal;
+        font-size: $font-size-sm;
+        line-height: 28px;
+      }
     }
 
     &__booking {
@@ -61,6 +88,15 @@
       align-items: center;
       gap: 56px;
 
+      @media screen and (max-width: $breakpoint-md) {
+        margin-bottom: 75px;
+        padding: 24px 9px 16px 14px;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
+
       &__content {
         display: flex;
         align-items: center;
@@ -70,6 +106,11 @@
           width: 50px;
           height: 50px;
           object-fit: cover;
+
+          @media screen and (max-width: $breakpoint-md) {
+            width: 34px;
+            height: 34px;
+          }
         }
 
         &__main {
@@ -78,6 +119,12 @@
             font-size: $font-size-md;
             line-height: 30px;
             letter-spacing: 0px;
+
+            @media screen and (max-width: $breakpoint-md) {
+              font-weight: $font-weight-bold;
+              font-size: $font-size-sm;
+              line-height: 30px;
+            }
           }
 
           &__description {
@@ -87,6 +134,12 @@
               font-size: $font-size-xxs;
               line-height: 100%;
               letter-spacing: 0px;
+
+              @media screen and (max-width: $breakpoint-md) {
+                font-weight: $font-weight-normal;
+                font-size: $font-size-xs;
+                line-height: 100%;
+              }
             }
             &__date {
               // font-family: Poppins;
@@ -94,13 +147,24 @@
               font-size: $font-size-xxs;
               line-height: 100%;
               letter-spacing: 0px;
+
+              @media screen and (max-width: $breakpoint-md) {
+                font-weight: $font-weight-bold;
+                font-size: $font-size-xs;
+                line-height: 100%;
+              }
             }
           }
         }
       }
 
+      // TODO add stock next to button :(
       &__button {
         min-width: 185px;
+        @media screen and (max-width: $breakpoint-md) {
+          margin-top: 18px;
+          margin-left: 40px;
+        }
       }
     }
 
@@ -110,18 +174,21 @@
       font-size: $font-size-xl-1;
       line-height: 56px;
       letter-spacing: 0px;
+
+      @media screen and (max-width: $breakpoint-md) {
+        display: none;
+      }
     }
   }
 
   &__right {
-    // width: 55%;
-    // position: absolute;
-    // top: 0;
-    // right: 0;
-    // z-index: 0;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @media screen and (max-width: $breakpoint-md) {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
     &__item {
       position: relative;
@@ -137,6 +204,10 @@
         background-color: rgba($color: $gray-color, $alpha: 0.75);
         border-radius: 20px;
 
+        @media screen and (max-width: $breakpoint-md) {
+          display: none;
+        }
+
         &__text {
           font-weight: $font-weight-bold;
           font-size: $font-size-md;
@@ -145,6 +216,10 @@
         }
       }
       &:nth-of-type(1) {
+        @media screen and (max-width: $breakpoint-md) {
+          width: 36%;
+          aspect-ratio: 141/171;
+        }
         .bookingfeature-section__right__item__image {
           transform: translateX(-22px);
           margin-bottom: 22px;
@@ -154,6 +229,15 @@
           height: 272px;
           border-radius: 20px;
           object-fit: cover;
+
+          @media screen and (max-width: $breakpoint-md) {
+            // width: 141px;
+            // height: 171px;
+            margin: 0;
+            transform: unset;
+            width: 100%;
+            height: 100%;
+          }
         }
         .bookingfeature-section__right__item__content {
           top: 44px;
@@ -161,6 +245,10 @@
         }
       }
       &:nth-of-type(2) {
+        @media screen and (max-width: $breakpoint-md) {
+          width: 60%;
+          aspect-ratio: 235/153;
+        }
         .bookingfeature-section__right__item__image {
           transform: translateY(50px);
           display: block;
@@ -168,6 +256,14 @@
           height: 243px;
           border-radius: 20px;
           object-fit: cover;
+
+          @media screen and (max-width: $breakpoint-md) {
+            // width: 235px;
+            // height: 153px;
+            transform: unset;
+            width: 100%;
+            height: 100%;
+          }
         }
 
         .bookingfeature-section__right__item__content {
@@ -176,6 +272,10 @@
         }
       }
       &:nth-of-type(3) {
+        @media screen and (max-width: $breakpoint-md) {
+          width: 53%;
+          aspect-ratio: 207/148;
+        }
         .bookingfeature-section__right__item__image {
           transform: translateX(-21px);
           display: block;
@@ -183,9 +283,21 @@
           height: 243px;
           border-radius: 20px;
           object-fit: cover;
+
+          @media screen and (max-width: $breakpoint-md) {
+            // width: 207px;
+            // height: 148px;
+            transform: unset;
+            width: 100%;
+            height: 100%;
+          }
         }
       }
       &:nth-of-type(4) {
+        @media screen and (max-width: $breakpoint-md) {
+          width: 43%;
+          aspect-ratio: 169/169;
+        }
         .bookingfeature-section__right__item__image {
           transform: translateY(19px);
           display: block;
@@ -193,6 +305,14 @@
           height: 277px;
           border-radius: 20px;
           object-fit: cover;
+
+          @media screen and (max-width: $breakpoint-md) {
+            // width: 169px;
+            // height: 169px;
+            transform: unset;
+            width: 100%;
+            height: 100%;
+          }
         }
       }
     }
