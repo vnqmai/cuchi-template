@@ -3,10 +3,22 @@
 .blogcontent-section {
   &__block {
     margin: 107px 0 56px 0;
+
+    @media screen and (max-width: $breakpoint-md) {
+      padding: 60px 0 0 0;
+    }
   }
 
   .blog-detail {
     padding: 0 130px 40px 130px;
+
+    @media screen and (max-width: $breakpoint-md) {
+      padding: 0 30px 40px 17px;
+
+      &.pinned {
+        padding: 0 6px 0 20px;
+      }
+    }
   }
 
   &__image {
@@ -14,6 +26,10 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+
+    @media screen and (max-width: $breakpoint-md) {
+      margin: 40px 0;
+    }
   }
 
   &__slick-block {
@@ -22,15 +38,36 @@
     align-items: flex-end;
     width: 100%;
 
+    @media screen and (max-width: $breakpoint-md) {
+      margin: 10px 0 50px 0;
+    }
+
     &__navigation {
       padding: 0 0 46px 35px;
       width: 100%;
       cursor: pointer;
+
+      @media screen and (max-width: $breakpoint-md) {
+        padding: 0 0 21px 16px;
+      }
+
+      .cucci-slick-next {
+        width: 49px;
+        height: 25px;
+        @media screen and (max-width: $breakpoint-md) {
+          width: 23px;
+          height: 12px;
+        }
+      }
+
     }
   }
 
   &__slick {
     width: 86%;
+    @media screen and (max-width: $breakpoint-md) {
+      width: 93%;
+    }
     &__item {
       width: 790px;
       height: 100%;
