@@ -10,33 +10,33 @@
     &__block {
       margin: 0 0 59px 139px;
       display: flex;
-      gap: 33px;
+      gap: 2.5%;
       height: 665px;
     }
 
     &__item {
       &:nth-of-type(1) {
-        width: 281px;
+        width: 21.6%;
         .bookingplace-section__image {
-          width: 281px;
-          height: 442px;
+          width: 100%;
+          aspect-ratio: 281/442;
           object-fit: cover;
         }
       }
       &:nth-of-type(2) {
-        width: 383px;
+        width: 29.4%;
         .bookingplace-section__image {
           margin-bottom: 50px;
-          width: 383px;
-          height: 500px;
+          width: 100%;
+          aspect-ratio: 383/500;
           object-fit: cover;
         }
       }
       &:nth-of-type(3) {
-        width: 574px;
+        width: 44.1%;
         .bookingplace-section__image {
-          width: 574px;
-          height: 343px;
+          width: 100%;
+          aspect-ratio: 574/343;
           object-fit: cover;
         }
       }
