@@ -1,74 +1,83 @@
-header(class="header")
-  .header__header
-    .container
-      .row
-        .header__header__left.col-xs-12.col-sm-12.col-md-3
-          .header__header__left__logo
-            a(href="/")
-              img(src="./img/cuchi-logo.svg" alt="Cucci Logo" class="logo")
-            img(id="header-more-button", src="./img/bars.svg" alt="bars" class="more-icon")
-        .header__header__right.col-xs-12.col-sm-12.col-md-9
-          .header__header__right__nav
-            ul
-              li: a(href="/") Homepage
-              li: a(href="/activities.html") Activities
-              li: a(href="/about.html") About Us
-              li: a(href="/contact.html") Contact Us
-              li: a(href="/blog.html") Blog
-          .header__header__right__languages 
-            ul 
-              li: img(src="./img/icons8-american-flag-48.svg" alt="English" class="flag")
-              li: img(src="./img/icons8-vietnam-48.svg" alt="Vietnam" class="flag")
-          .header__header__right__booknow
-            button(class="btn btn--primary", onclick="window.open('/booking.html', '_self')") Book Now
-      .header__drawer(id="header-drawer")
-        .header__menu
-          img.header__menu__close(id="header-close-button", src="../img/close.svg", alt="")
-          a.header__menu__item(href="/")
-            .header__menu__item__icon
-              img(src="../img/menu-home.svg", alt="")
-            .header__menu__item__title Home
-          a.header__menu__item(href="/booking.html")
-            .header__menu__item__icon
-              img(src="../img/menu-booking.svg", alt="")
-            .header__menu__item__title Booking
-          a.header__menu__item(href="/activities.html")
-            .header__menu__item__icon
-              img(src="../img/menu-activities.svg", alt="")
-            .header__menu__item__title Activities
-          a.header__menu__item(href="/about.html")
-            .header__menu__item__icon
-              img(src="../img/menu-about.svg", alt="")
-            .header__menu__item__title About Us
-          a.header__menu__item(href="/contact.html")
-            .header__menu__item__icon
-              img(src="../img/menu-contact.svg", alt="")
-            .header__menu__item__title Contact Us
-  .header__hero 
-    .container-fluid
-      .row 
-        //- .header__hero(style="background-image: url('./img/cuchi-hero.png');")
-        .header__hero
-          img(src="./img/cuchi-hero.png" alt="Cucci Hero" class="header__hero__image")
-          .header__hero__search 
-            .header__hero__search__filters
-              .header__hero__search__filters__item
-                .header__hero__search__filters__item__title Check in Date
-                .header__hero__search__filters__item__input 
-                  include ../components/datepicker
-              .header__hero__search__filters__item
-                .header__hero__search__filters__item__title Check out Date
-                .header__hero__search__filters__item__input 
-                  include ../components/datepicker
-              .header__hero__search__filters__item
-                .header__hero__search__filters__item__title People
-                .header__hero__search__filters__item__input 
-                  include ../components/select
-                  +select("people", [
-                    { value: "1", label: "1" },
-                    { value: "2", label: "2" },
-                    { value: "3", label: "3" },
-                    { value: "4", label: "4" },
-                    { value: "5", label: "5" }
-                  ], "1")
-            .header__hero__search__submit Search
+mixin header(isShowSelection=true, isShowCallNow=false)
+  header(class="header")
+    .header__header
+      .container
+        .row
+          .header__header__left.col-xs-12.col-sm-12.col-md-3
+            .header__header__left__logo
+              a(href="/")
+                img(src="./img/cuchi-logo.svg" alt="Cucci Logo" class="logo")
+              img(id="header-more-button", src="./img/bars.svg" alt="bars" class="more-icon")
+          .header__header__right.col-xs-12.col-sm-12.col-md-9
+            .header__header__right__nav
+              ul
+                li: a(href="/") Homepage
+                li: a(href="/activities.html") Activities
+                li: a(href="/about.html") About Us
+                li: a(href="/contact.html") Contact Us
+                li: a(href="/blog.html") Blog
+            .header__header__right__languages 
+              ul 
+                li: img(src="./img/icons8-american-flag-48.svg" alt="English" class="flag")
+                li: img(src="./img/icons8-vietnam-48.svg" alt="Vietnam" class="flag")
+            .header__header__right__booknow
+              button(class="btn btn--primary", onclick="window.open('/booking.html', '_self')") Book Now
+        .header__drawer(id="header-drawer")
+          .header__menu
+            img.header__menu__close(id="header-close-button", src="../img/close.svg", alt="")
+            a.header__menu__item(href="/")
+              .header__menu__item__icon
+                img(src="../img/menu-home.svg", alt="")
+              .header__menu__item__title Home
+            a.header__menu__item(href="/booking.html")
+              .header__menu__item__icon
+                img(src="../img/menu-booking.svg", alt="")
+              .header__menu__item__title Booking
+            a.header__menu__item(href="/activities.html")
+              .header__menu__item__icon
+                img(src="../img/menu-activities.svg", alt="")
+              .header__menu__item__title Activities
+            a.header__menu__item(href="/about.html")
+              .header__menu__item__icon
+                img(src="../img/menu-about.svg", alt="")
+              .header__menu__item__title About Us
+            a.header__menu__item(href="/contact.html")
+              .header__menu__item__icon
+                img(src="../img/menu-contact.svg", alt="")
+              .header__menu__item__title Contact Us
+    .header__hero 
+      .container-fluid
+        .row 
+          //- .header__hero(style="background-image: url('./img/cuchi-hero.png');")
+          .header__hero
+            img(src="./img/cuchi-hero.png" alt="Cucci Hero" class="header__hero__image")
+            if isShowCallNow
+              .header__hero__callnow
+                .header__hero__callnow__logo C
+                .header__hero__callnow__description We’d love to hear from you! Whether you’re planning your next getaway or have questions about our services, feel free to reach out to us:
+                a.header__hero__callnow__action(href="#")
+                  .header__hero__callnow__action__link Call Now 
+                  img.header__hero__callnow__action__icon(src="../img/arrow-right-1.svg", alt="")
+            if isShowSelection
+              .header__hero__search 
+                .header__hero__search__filters
+                  .header__hero__search__filters__item
+                    .header__hero__search__filters__item__title Check in Date
+                    .header__hero__search__filters__item__input 
+                      include ../components/datepicker
+                  .header__hero__search__filters__item
+                    .header__hero__search__filters__item__title Check out Date
+                    .header__hero__search__filters__item__input 
+                      include ../components/datepicker
+                  .header__hero__search__filters__item
+                    .header__hero__search__filters__item__title People
+                    .header__hero__search__filters__item__input 
+                      include ../components/select
+                      +select("people", [
+                        { value: "1", label: "1" },
+                        { value: "2", label: "2" },
+                        { value: "3", label: "3" },
+                        { value: "4", label: "4" },
+                        { value: "5", label: "5" }
+                      ], "1")
+                .header__hero__search__submit Search

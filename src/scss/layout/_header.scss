@@ -284,5 +284,101 @@
         }
       }
     }
+
+    &__callnow {
+      position: absolute;
+      bottom: 35px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 80%;
+      height: 141px;
+
+      padding: 0 27px 0 17px;
+      background-color: #EBECF0;
+
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      @media screen and (max-width: $breakpoint-md) {
+        flex-wrap: wrap;
+        height: unset;
+        justify-content: center;
+      }
+
+      &__logo {
+        position: relative;
+        // font-family: Archivo Black;
+        font-family: "Archivo Black", sans-serif;
+        font-weight: $font-weight-normal;
+        font-size: 134px; //TODO: variable
+        line-height: 136px;
+        letter-spacing: 0%;
+        color: $primary-color;
+        z-index: 1;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 76px;
+          height: 76px;
+          background-color: $secondary-color;
+          border-radius: 50%;
+          z-index: -1;
+        }
+      }
+
+      &__description {
+        font-size: $font-size-md;
+        font-weight: $font-weight-normal;
+        line-height: 30px;
+        max-width: 707px;
+
+        @media screen and (max-width: $breakpoint-md) {
+          text-align: center;
+        }
+      }
+
+      &__action {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        @media screen and (max-width: $breakpoint-md) {
+          justify-content: center;
+        }
+
+        &:hover,
+        &:focus-visible {
+          color: $secondary-color;
+          text-decoration: none;
+        }
+
+        &__link {
+          min-width: 140px;
+          font-weight: $font-weight-bold;
+          font-size: $font-size-md;
+          line-height: 36px;
+          letter-spacing: 0px;
+          color: $secondary-color;
+          text-decoration: none;
+
+          @media screen and (max-width: $breakpoint-md) {
+            min-width: unset;
+            margin-right: 10px;
+          }
+        }
+
+        &__icon {
+          width: 13px;
+          height: 23px;
+          object-fit: contain;
+        }
+      }
+    }
   }
 }
