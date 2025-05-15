@@ -2,6 +2,7 @@
 
 .meettheteam-section {
   position: relative;
+  overflow: hidden;
 
   &__skew-image {
       padding: 0 107px 0 162px;
@@ -140,7 +141,7 @@
       }
       &__images {
         @media screen and (max-width: $breakpoint-md) {
-          margin-left: 20px;
+          margin-left: 5%;
         }
         &__group {
           &:nth-of-type(1) {
@@ -152,9 +153,12 @@
               height: 458px;
 
               @media screen and (max-width: $breakpoint-md) {
-                margin-left: 24px;
-                width: 198px;
-                height: 238px;
+                margin-left: 6%;
+                // width: 198px;
+                // height: 238px;
+                width: 46%;
+                height: fit-content;
+                aspect-ratio: 198/238;
               }
             }
           }
@@ -173,8 +177,12 @@
 
                 @media screen and (max-width: $breakpoint-md) {
                   margin-top: -22px;
-                  width: 123px;
-                  height: 148px;
+                  // width: 123px;
+                  // height: 148px;
+                  // transform: translate(0, -22%);
+                  width: 28%;
+                  height: fit-content;
+                  aspect-ratio: 123/148;
                 }
               }
               &:nth-of-type(2) {
@@ -183,8 +191,12 @@
 
                 @media screen and (max-width: $breakpoint-md) {
                   margin-top: -33px;
-                  width: 105px;
-                  height: 124px;
+                  // width: 105px;
+                  // height: 124px;
+                  // transform: translate(0, -33px);
+                  width: 25%;
+                  height: fit-content;
+                  aspect-ratio: 105/124;
                 }
               }
             }
