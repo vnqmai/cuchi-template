@@ -91,4 +91,18 @@
       display: none;
     }
   }
+
+  &__go-to-top {
+    position: absolute;
+    right: 40px;
+    bottom: 80px;
+    width: 25px;
+    height: 49px;
+    object-fit: cover;
+    cursor: pointer;
+
+    @media screen and (max-width: $breakpoint-md) {
+      display: none;
+    }
+  }
 }

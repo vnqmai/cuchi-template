@@ -68,13 +68,15 @@
     }
     
     &__content {
-      margin-left: -40%;
-      width: 140%;
+      margin-left: 0;
+      width: 100%;
       padding: 20px 30px;
       border-radius: 20px;
       background-color: $primary-color;
 
       @media screen and (max-width: $breakpoint-md) {
+        margin-left: -40%;
+        width: 140%;
         padding: 15px 20px;
       }
       &__title {

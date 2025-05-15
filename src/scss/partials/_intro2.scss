@@ -30,8 +30,9 @@
         }
 
         &__content {
+          margin-right: 8%;
           padding: 116px 0 97px 0;
-          width: 397px;
+          width: 28%;
 
           @media screen and (max-width: $breakpoint-md) {
             padding: 0;

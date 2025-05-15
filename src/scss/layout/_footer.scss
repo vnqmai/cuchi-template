@@ -4,7 +4,11 @@
   position: relative;
   &__footer {
     background-color: $secondary-color;
-    padding: 20px;
+    padding: 47px;
+
+    @media screen and (max-width: $breakpoint-md) {
+      padding: 38px 23px;
+    }
 
     &__left {
       &__logo {
@@ -49,6 +53,7 @@
 
         @media screen and (max-width: $breakpoint-md) {
           font-size: $font-size-md-2;
+          width: 40%;
         }
       }
 
@@ -94,6 +99,7 @@
 
     &__right {
       &__title {
+        padding-top: 40px;
         color: $primary-color;
         margin-bottom: 35px;
 
@@ -129,9 +135,19 @@
           width: 31px;
           height: 31px;
         }
+      }
 
-        @media screen and (max-width: $breakpoint-md) {
-          display: none;
+      @media screen and (max-width: $breakpoint-md) {
+        position: absolute;
+        top: 44px;
+        right: 25px;
+        width: fit-content;
+          padding: 0;
+
+        &__nav {
+          ul {
+            gap: 13px;
+          }
         }
       }
     }
