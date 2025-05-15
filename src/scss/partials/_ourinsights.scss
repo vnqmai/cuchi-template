@@ -25,11 +25,6 @@
     &__image {
       position: relative;
       width: 100%;
-      img {
-        width: 100%;
-        aspect-ratio: 380/432;
-        object-fit: cover;
-      }
     }
 
     &__description {
@@ -38,6 +33,17 @@
       font-size: $font-size-md-3;
       line-height: 36px;
       letter-spacing: 0px;
+
+      @media screen and (max-width: $breakpoint-md) {
+        margin-top: 18px;
+        font-size: $font-size-md-2;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
 
     &:hover {
@@ -52,6 +58,28 @@
         background-color: #D8D8D8;
         opacity: 0.5;
         z-index: 1;
+      }
+    }
+  }
+
+  .slick-slider {
+    .slick-track {
+      height: 500px;
+    }
+    .slick-slide {
+      img {
+        aspect-ratio: 276 / 314;
+        width: 100%;
+        max-width: 276px;
+        transition: all 0.3s ease;
+      }
+  
+      &.slick-active {
+        img {
+          aspect-ratio: 309 / 350;
+          max-width: 309px;
+          transition: all 0.3s ease;
+        }
       }
     }
   }
