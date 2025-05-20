@@ -68,16 +68,19 @@
       }
     }
 
-    &.slick-slide.slick-current.slick-center {
-      transform: translateY(0px);
-      transition: transform 0.3s ease;
-      &.slick-active {
-        transform: translateY(30px);
+    &.slick-slide {
+      position: relative;
+      &.slick-current.slick-center {
+        transform: translateY(0px);
         transition: transform 0.3s ease;
-  
-        @media screen and (max-width: $breakpoint-md) {
-          transform: translateY(27px);
+        &.slick-active {
+          transform: translateY(30px);
           transition: transform 0.3s ease;
+
+          @media screen and (max-width: $breakpoint-md) {
+            transform: translateY(27px);
+            transition: transform 0.3s ease;
+          }
         }
       }
     }

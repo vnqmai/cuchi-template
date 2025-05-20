@@ -12,10 +12,12 @@ mixin bookingfeature(className="", title="", highlights=[], description="", star
               .bookingfeature-section__left__booking__content__main
                 .bookingfeature-section__left__booking__content__main__title Selected Date
                 .bookingfeature-section__left__booking__content__main__description
-                  span.bookingfeature-section__left__booking__content__main__description__label From 
-                  span.bookingfeature-section__left__booking__content__main__description__date= startDate  
-                  span.bookingfeature-section__left__booking__content__main__description__label To 
-                  span.bookingfeature-section__left__booking__content__main__description__date= endDate
+                  .bookingfeature-section__left__booking__content__main__description__block
+                    span.bookingfeature-section__left__booking__content__main__description__label From 
+                    span.bookingfeature-section__left__booking__content__main__description__date= startDate  
+                  .bookingfeature-section__left__booking__content__main__description__block
+                    span.bookingfeature-section__left__booking__content__main__description__label To 
+                    span.bookingfeature-section__left__booking__content__main__description__date= endDate
             .bookingfeature-section__left__booking__action
               button.bookingfeature-section__left__booking__button.btn.btn--primary  Book Now
               .bookingfeature-section__left__booking__stock= stock
